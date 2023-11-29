@@ -16,7 +16,7 @@ function GameGrid() {
         padding={10}
       >
         {games.map((game) => (
-          <GameCard game={game}></GameCard>
+          <GameCard game={game} key={game.id}></GameCard>
         ))}
       </SimpleGrid>
     </>
