@@ -19,13 +19,14 @@ export interface Game {
   }
   
 
-const useGames = (selectedGenre: Genre | null, selectedPlatform : Platform | null)=>{
+const useGames = (selectedGenre: Genre | null, selectedPlatform : Platform | null, sortOrder: string)=>{
     return useData<Game>("/games", {
         params: {
             genres:selectedGenre?.id, 
-            platforms: selectedPlatform?.id
+            platforms: selectedPlatform?.id,
+            ordering: sortOrder
         }}, 
-        [selectedGenre?.id, selectedPlatform?.id]);
+        [selectedGenre?.id, selectedPlatform?.id,sortOrder]);
     
 }
 
