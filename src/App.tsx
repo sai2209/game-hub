@@ -14,7 +14,7 @@ function App() {
     null
   );
   const [selectedSortOrder, setSelectedSortOrder] = useState("");
-  const [searchText, setSearchText] = useState("null");
+  const [searchText, setSearchText] = useState("");
 
   const onSelectGenre = (genre: Genre) => {
     setSelectedGenre(genre);
